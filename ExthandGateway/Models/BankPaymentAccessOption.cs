@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exthand.GatewayClient.Models
 {
+    public enum SpecificPaymentDateOption
+    {
+        NOT_ALLOWED,
+        ALLOWED
+    }
 
     public class BankPaymentAccessOption
     {
@@ -29,6 +34,7 @@ namespace Exthand.GatewayClient.Models
     {
         public bool supported { get; set; }
         public bool cancelSupported { get; set; }
+        public SpecificPaymentDateOption SpecificPaymentDate { get; set; }
     }
 
     public class AdditionalPropertyRequested
